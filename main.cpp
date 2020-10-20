@@ -1,9 +1,21 @@
 #include <iostream>
-#include <cstdlib> // для system
-using namespace std;
-
-int main() 
-{ 
-    cout << "Hello, world!" << endl;
-    return 0; 
+ 
+int main()
+{
+    // Переменная count хранит текущее число для вывода 
+    int count = 1; // начинаем с 1
+ 
+    // Повторение операции (цикл) до тех пор, пока count не будет равен 100
+    while (count <= 100)
+    {
+        std::cout << count << " "; // вывод текущего числа 
+ 
+        // Если count делится на 20 без остатка, то вставляем разрыв строки и продолжаем с новой строки
+        if (count % 20 == 0)
+            std::cout << "\n";
+ 
+        count = count + 1; // переходим к следующему числу
+    } // конец while
+ 
+    return 0;
 }
